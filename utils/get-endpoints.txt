@@ -1,0 +1,52 @@
+/account_dimensions: Retrieve the account dimensions (subaccounts) of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/AccountsDimensions'}}
+/accounts: Retrieve the account structure of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/Accounts'}}
+/bank_accounts: Retrieve the bank account list of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/BankAccounts'}}
+/currencies: Retrieve the active currencies of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/Currencies'}}
+/invoice_series: Retrieve the invoice series list of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/InvoiceSeries'}}
+/purchase_articles: Retrieve the purchase articles of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/PurchaseArticles'}}
+/sale_articles: Retrieve the sale articles of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/SaleArticles'}}
+/templates: Retrieve the sale invoice templates of the specified company.
+	{'type': 'array', 'items': {'$ref': '#/components/schemas/Templates'}}
+
+/invoice_info: Retrieve the invoice settings of the specified company.
+	{'$ref': '#/components/schemas/CompanyInvoiceInfo'}
+/vat_info: Retrieve the VAT information of the specified company.
+	{'$ref': '#/components/schemas/CompanyVatInfo'}
+
+/clients: Retrieve the client list of the specified company.
+	{'$ref': '#/components/schemas/ListOfClients'}
+/journals: Retrieve the journal entry list of the specified company.
+	{'$ref': '#/components/schemas/ListOfJournals'}
+/products: Retrieve the product list of the specified company.
+	{'$ref': '#/components/schemas/ListOfProducts'}
+/projects: Retrieve the cost/profit centres list of the specified company.
+	{'$ref': '#/components/schemas/ListOfProjects'}
+/purchase_invoices: Retrieve the purchase invoice list of the specified company.
+	{'$ref': '#/components/schemas/ListOfPurchaseInvoices'}
+/sale_invoices: Retrieve the sale invoice list of the specified company.
+	{'$ref': '#/components/schemas/ListOfSaleInvoices'}
+/transactions: Retrieve the transaction list of the specified company.
+	{'$ref': '#/components/schemas/ListOfTransactions'}
+
+/journals/{journals_id}/document_user: Retrieve the document related to a journal entry of the specified company.
+	{'$ref': '#/components/schemas/ApiFile'}
+/purchase_invoices/{purchase_invoices_id}/document_user: Retrieve the user-uploaded document related to a purchase-invoice of the specified company.
+	{'$ref': '#/components/schemas/ApiFile'}
+/transactions/{transactions_id}/document_user: Retrieve the document related to a transaction of the specified company.
+	{'$ref': '#/components/schemas/ApiFile'}
+
+/sale_invoices/{sale_invoices_id}/document_user: Retrieve the user-uploaded document related to a sale-invoice of the specified company.
+	{'$ref': '#/components/schemas/ApiFile'}
+/sale_invoices/{sale_invoices_id}/pdf_system: Retrieve the system-generated document related to a sale-invoice of the specified company.
+	{'$ref': '#/components/schemas/ApiFile'}
+
+/sale_invoices/{sale_invoices_id}/delivery_options: Retrieve delivery options for one specific sale invoice of the specified company.
+	{'$ref': '#/components/schemas/ApiResponse'}
+

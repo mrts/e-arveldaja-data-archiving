@@ -1,0 +1,5 @@
+*.swp
+output/
+venv/
+__pycache__/
+config.py
